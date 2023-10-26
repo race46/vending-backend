@@ -38,8 +38,6 @@ public class AdminController {
 
     @PutMapping("/money/{unit}/collect")
     public ResponseEntity<Status> collectMoney(@PathVariable("unit") int unit, @RequestBody CollectMoney collectMoney){
-        System.out.println(unit);
-        System.out.println(collectMoney.getCount());
         return service.collectMoney(unit, collectMoney);
     }
 

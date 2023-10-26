@@ -34,7 +34,6 @@ public class MachineService {
     }
 
     public List<Product> getAllProducts() {
-        productRepository.findAll();
         return productRepository.findAll();
     }
 

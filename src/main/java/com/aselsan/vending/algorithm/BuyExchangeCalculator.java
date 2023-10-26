@@ -44,7 +44,7 @@ public class BuyExchangeCalculator {
         return res;
     }
 
-    public int[] calculateExchanges(List<Money> moneys, BuyProduct buyProduct, Product product, int total) throws Exception {
+    public int[] calculateExchanges(List<Money> moneys, BuyProduct buyProduct, Product product, int total) {
         Collections.reverse(moneys);
         moneys.forEach(money -> money.setCount(money.getCount() + counter(buyProduct.getMoneys(), money.getUnit())));
         int exchanges[] = calculator(moneys,new int[0], total - product.getPrice(), 0);
